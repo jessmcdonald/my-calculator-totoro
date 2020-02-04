@@ -1,5 +1,5 @@
 import React from 'react';
-import totoro from './totoro.png'
+import totoro from './img/totoro.png'
 import './App.css';
 
 function App() {
