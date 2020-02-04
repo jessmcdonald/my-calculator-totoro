@@ -67,6 +67,20 @@ body {
   grid-row-gap: 5px;
 }
 
+button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px
+}
+
+button:active {
+  background-color: #8a8ed5;
+}
+button:focus {
+  outline: #8a8ed5 5px;
+  border-radius: 4px;
+}
+
 @font-face {
   font-family: 'Spumoni';
   src: local('Spumoni'), url(./fonts/Spumoni.ttf) format('truetype')

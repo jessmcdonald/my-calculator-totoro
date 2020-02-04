@@ -1,17 +1,23 @@
 import React from 'react';
 import totoro from './img/totoro.png'
 import './App.css';
-import Button from './components/button/button';
 import Screen from './components/screen/screen';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, "+", "-", "/", "*", "="],
-      result: null
+      buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, "+", "-", "/", "*", "C"],
+      query: "",
+      result: 123
     };
   }
+
+  handleItemClicked = (value) => {
+    let newState = this.state.query + value;
+    this.setState({ query: newState });
+    console.log(this.state)
+  };
 
   render() {
     return (
@@ -28,13 +34,20 @@ class App extends React.Component {
 
             <div className="Calculator">
               <div className="Display-Screen">
-              <Screen/>
+              <Screen key={this.state.query} query={this.state.query}/>
               </div>
               
               <div className="Button-Pad">
                 <div className="Buttons">
                   {this.state.buttons.map(item => (
-                    <Button key={item} digit={item}>{item}</Button>
+                    <button
+                      key={item}
+                      onClick={() =>
+                        this.handleItemClicked(item)
+                      }
+                      >
+                        {item}
+                    </button>
                   ))}
                 </div>
               </div>
@@ -46,8 +59,6 @@ class App extends React.Component {
 
 
   }
-
- 
 }
 
 export default App;
