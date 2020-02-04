@@ -1,17 +1,19 @@
 import React from 'react';
+import totoro from './totoro.png'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <img src={process.env.PUBLIC_URL + '/totoro.png'} alt="Totoro" />
-      
-        
-  
-          My Calculator Totoro
-    
       </header>
+      <body className="App-Body">
+        <h3>My Calculator</h3>
+        <h1>TOTORO</h1>
+        <p>
+        <img src={totoro} alt="Totoro" height="600" />
+        </p>
+      </body>
     </div>
   );
 }
