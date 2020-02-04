@@ -10,6 +10,7 @@
   width: 100%;
   min-height: 1000px;
   text-align: center;
+  display: inline-block
 }
 
 .Header {
@@ -19,10 +20,8 @@
 .Totoro {
   width: 460px;
   text-align: center;
-  padding: 0px;
-  margin: 0px;
   display: inline-block;
-  position: absolute;
+  position: relative
 }
 
 h1 {
@@ -67,7 +66,6 @@ body {
   grid-column-gap: 10px;
   grid-row-gap: 5px;
 }
-
 
 @font-face {
   font-family: 'Spumoni';
