@@ -8,6 +8,8 @@ function App() {
       <header className="App-header">
       </header>
       <body className="App-Body">
+        <div className="Header">
+        </div>
         <h3>My Calculator</h3>
         <h1>TOTORO</h1>
         <p>
