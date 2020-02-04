@@ -24,7 +24,7 @@ class App extends React.Component {
           <h3>My Calculator</h3>
           <h1>TOTORO</h1>
           <div className="Totoro">
-            <img src={totoro} alt="Totoro" height="600" />
+            <img src={totoro} alt="Totoro" height="600" className="Tototo-Img"/>
 
             <div className="Calculator">
               <div className="Display-Screen">
