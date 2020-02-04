@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SevenSegment';
+    src: local('SevenSegment'), url(../../fonts/SevenSegment.ttf) format('truetype')
+  }
+
+.Screen-Div {
+    text-align: center; 
+    display: inline-block;
+    background-color: #395f37;
+    width: 300px;
+    font-family: SevenSegment;
+    font-size: 40px
+}
