@@ -19,9 +19,14 @@ class Screen extends React.Component {
                         </div>
                         
                         <button className="Equals-Button" key={"="} onClick={() =>
-                        this.props.handleItemClicked("=")
-                      }>
+                            this.props.handleButtonClicked("=")
+                        }>
                         =
+                        </button>
+                        <button className="Clear-Button" key={"C"} onClick={() =>
+                            this.props.handleButtonClicked("C")
+                        }>
+                        C
                         </button>
 
                     </div>

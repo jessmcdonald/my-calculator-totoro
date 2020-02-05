@@ -7,14 +7,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, "+", "-", "/", "*", "C"],
+      buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ".", "+", "-", "/", "*"],
       display: "",
-      query: ""
+      query: "",
+      firstNumber: "",
+      secondNumber: "",
     };
   }
 
   plusFunction = () => {
-
+    
   };
 
   minusFunction = () => {
@@ -30,20 +32,25 @@ class App extends React.Component {
   };
 
   equalsFunction = () => {
-
+    this.setState({ display: "answer"})
   };
 
   clearScreen = () => {
     this.setState({ display: ""});
-    this.setState({ query: ""})
+    this.setState({ query: ""});
+    this.setState({ firstNumber: ""});
+    this.setState({ secondNumber: ""});
   };
 
-  handleItemClicked = (value) => {
-    if (value == "C") {
+  handleButtonClicked = (value) => {
+    if (value === "C") {
       this.clearScreen();
     } else {
-      this.setState({ display: value });
-      console.log(this.state)
+      if (value === "=") {
+        this.equalsFunction();
+      } else {
+        this.setState({ display: value });
+      };
     }
   };
 
@@ -62,7 +69,7 @@ class App extends React.Component {
 
             <div className="Calculator">
               <div className="Display-Screen">
-              <Screen key={this.state.display} display={this.state.display} handleItemClicked={this.handleItemClicked}/>
+              <Screen key={this.state.display} display={this.state.display} handleButtonClicked={this.handleButtonClicked}/>
               </div>
               
               <div className="Button-Pad">
@@ -71,7 +78,7 @@ class App extends React.Component {
                     <button
                       key={item}
                       onClick={() =>
-                        this.handleItemClicked(item)
+                        this.handleButtonClicked(item)
                       }
                       >
                         {item}

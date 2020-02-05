@@ -20,11 +20,12 @@
 }
 
 .Result {
-  width: 250px;
+  width: 220px;
   height: 40px;
 }
 
-.Equals-Button {
-  width: 50px;
+.Equals-Button, .Clear-Button {
+  width: 40px;
   height: 40px;
 }
+
