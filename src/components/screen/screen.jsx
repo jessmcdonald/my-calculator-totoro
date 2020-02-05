@@ -12,7 +12,18 @@ class Screen extends React.Component {
     render() {
         
         return(
-                <div className="Screen-Div">{this.state.result}</div>
+                <div className="Screen-Div">
+                    <div className="Display">
+                        <div className="Result">
+                            {this.state.result}
+                        </div>
+                        
+                        <button className="Equals-Button">
+                        =
+                        </button>
+                        
+                    </div>
+                </div>
         )
     }
 }

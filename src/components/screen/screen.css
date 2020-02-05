@@ -8,6 +8,23 @@
     display: inline-block;
     background-color: #395f37;
     width: 300px;
+    height: 40px;
     font-family: SevenSegment;
-    font-size: 40px;
+    font-size: 35px;
+}
+
+.Display {
+  display: flex;
+  width: 300px;
+  height: 40px
+}
+
+.Result {
+  width: 250px;
+  height: 40px;
+}
+
+.Equals-Button {
+  width: 50px;
+  height: 40px;
 }

@@ -14,9 +14,14 @@ class App extends React.Component {
   }
 
   handleItemClicked = (value) => {
-    let newState = this.state.query + value;
-    this.setState({ query: newState });
-    console.log(this.state)
+    if (value !== "C") {
+      let newState = this.state.query + value;
+      this.setState({ query: newState });
+      console.log(this.state)
+    } else {
+      this.setState({ query: ""})
+    }
+    
   };
 
   render() {
