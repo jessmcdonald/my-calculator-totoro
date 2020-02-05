@@ -10,25 +10,26 @@ class App extends React.Component {
       buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ".", "+", "-", "/", "*"],
       display: "",
       query: "",
+      result: 0,
       firstNumber: "",
       secondNumber: "",
     };
   }
 
-  plusFunction = () => {
-    
+  plusFunction = (value) => {
+    this.setState({ display: value})
   };
 
-  minusFunction = () => {
-
+  minusFunction = (value) => {
+    this.setState({ display: value})
   };
 
-  multiplyFunction = () => {
-
+  multiplyFunction = (value) => {
+    this.setState({ display: value})
   };
 
-  divideFunction = () => {
-
+  divideFunction = (value) => {
+    this.setState({ display: value})
   };
 
   equalsFunction = () => {
@@ -47,10 +48,26 @@ class App extends React.Component {
       this.clearScreen();
     } else {
       if (value === "=") {
-        this.equalsFunction();
+        this.equalsFunction(value);
       } else {
-        this.setState({ display: value });
-      };
+        if (value === "+") {
+          this.plusFunction(value);
+        } else {
+          if (value === "-") {
+            this.minusFunction(value);
+          } else {
+            if (value === "*") {
+              this.multiplyFunction(value);
+            } else {
+              if (value === "/") {
+                this.divideFunction(value);
+              } else {
+                this.setState({ display: value });
+              }
+            }
+          }
+        }
+      }
     }
   };
 
