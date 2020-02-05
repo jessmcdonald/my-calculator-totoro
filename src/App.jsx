@@ -15,8 +15,9 @@ class App extends React.Component {
   }
 
   numberFunction = (value) => {
-    this.setState({ display: value });
     let input = this.state.query += value;
+    let display = this.state.display += value;
+    this.setState({ display: display });
     this.setState({ query: input});
     console.log(input);
   };
@@ -25,6 +26,7 @@ class App extends React.Component {
     this.setState({ display: value });
     let input = this.state.query += value;
     this.setState({ query: input});
+    this.clearDisplay();
   })
 
   equalsFunction = () => {
@@ -35,14 +37,18 @@ class App extends React.Component {
     this.setState({ query: answer})
   };
 
-  clearScreen = () => {
+  clearDisplay = () => {
+    this.setState({ display: ""});
+  };
+
+  clearQuery = () => {
     this.setState({ display: ""});
     this.setState({ query: ""});
   };
 
   handleButtonClicked = (value) => {
     if (value === "C") {
-      this.clearScreen();
+      this.clearQuery();
     } else {
       if (value === "=") {
         this.equalsFunction();
@@ -62,7 +68,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
         </header>
-        <body className="App-Body">
+        <div className="App-Body">
           <div className="Header">
           </div>
           <h3>My Calculator</h3>
@@ -91,7 +97,7 @@ class App extends React.Component {
               </div>
             </div>
           </div>
-        </body>
+        </div>
       </div>
     );
 
