@@ -19,7 +19,6 @@ class App extends React.Component {
     let display = this.state.display += value;
     this.setState({ display: display });
     this.setState({ query: input});
-    console.log(input);
   };
 
   actionFunction = (value => {
@@ -31,10 +30,16 @@ class App extends React.Component {
 
   equalsFunction = () => {
     let query = this.state.query;
-    let answer = eval(query);
-    this.setState({ result: answer });
-    this.setState({ display: answer});
-    this.setState({ query: answer})
+    try {
+      let answer = eval(query);
+      this.setState({ result: answer });
+      this.setState({ display: answer});
+      this.setState({ query: answer})
+    }
+    catch (error) {
+      console.log(error);
+      this.setState({ display: "error"})
+    }
   };
 
   clearDisplay = () => {
