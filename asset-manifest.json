@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/my-calculator-totoro/static/css/main.7589b346.chunk.css",
+    "main.js": "/my-calculator-totoro/static/js/main.f854f89c.chunk.js",
+    "main.js.map": "/my-calculator-totoro/static/js/main.f854f89c.chunk.js.map",
+    "runtime-main.js": "/my-calculator-totoro/static/js/runtime-main.b34d64da.js",
+    "runtime-main.js.map": "/my-calculator-totoro/static/js/runtime-main.b34d64da.js.map",
+    "static/js/2.38d4dbce.chunk.js": "/my-calculator-totoro/static/js/2.38d4dbce.chunk.js",
+    "static/js/2.38d4dbce.chunk.js.map": "/my-calculator-totoro/static/js/2.38d4dbce.chunk.js.map",
+    "index.html": "/my-calculator-totoro/index.html",
+    "precache-manifest.ecc4bdffa807e0a93891867507a80f1f.js": "/my-calculator-totoro/precache-manifest.ecc4bdffa807e0a93891867507a80f1f.js",
+    "service-worker.js": "/my-calculator-totoro/service-worker.js",
+    "static/css/main.7589b346.chunk.css.map": "/my-calculator-totoro/static/css/main.7589b346.chunk.css.map",
+    "static/js/2.38d4dbce.chunk.js.LICENSE.txt": "/my-calculator-totoro/static/js/2.38d4dbce.chunk.js.LICENSE.txt",
+    "static/media/screen.css": "/my-calculator-totoro/static/media/SevenSegment.624871e1.ttf",
+    "static/media/App.css": "/my-calculator-totoro/static/media/background.e7a270aa.jpg",
+    "static/media/totoro.png": "/my-calculator-totoro/static/media/totoro.f93bb596.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b34d64da.js",
+    "static/js/2.38d4dbce.chunk.js",
+    "static/css/main.7589b346.chunk.css",
+    "static/js/main.f854f89c.chunk.js"
+  ]
+}
