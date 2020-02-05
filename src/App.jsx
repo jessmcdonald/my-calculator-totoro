@@ -10,7 +10,7 @@ class App extends React.Component {
       buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ".", "+", "-", "/", "*"],
       display: "",
       query: "",
-      result: "nothing"
+      result: ""
     };
   }
 
@@ -18,7 +18,7 @@ class App extends React.Component {
     this.setState({ display: value });
     let input = this.state.query += value;
     this.setState({ query: input});
-    console.log(eval(input));
+    console.log(input);
   };
 
   actionFunction = (value => {
@@ -32,13 +32,12 @@ class App extends React.Component {
     let answer = eval(query);
     this.setState({ result: answer });
     this.setState({ display: answer});
+    this.setState({ query: answer})
   };
 
   clearScreen = () => {
     this.setState({ display: ""});
     this.setState({ query: ""});
-    this.setState({ firstNumber: ""});
-    this.setState({ secondNumber: ""});
   };
 
   handleButtonClicked = (value) => {
