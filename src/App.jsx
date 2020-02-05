@@ -10,34 +10,28 @@ class App extends React.Component {
       buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ".", "+", "-", "/", "*"],
       display: "",
       query: "",
-      result: "answer"
+      result: "nothing"
     };
   }
 
   numberFunction = (value) => {
     this.setState({ display: value });
+    let input = this.state.query += value;
+    this.setState({ query: input});
+    console.log(eval(input));
   };
 
-  plusFunction = (value) => {
-    this.setState({ display: value})
-  };
-
-  minusFunction = (value) => {
-    this.setState({ display: value})
-  };
-
-  multiplyFunction = (value) => {
-    this.setState({ display: value})
-  };
-
-  divideFunction = (value) => {
-    this.setState({ display: value})
-  };
+  actionFunction = (value => {
+    this.setState({ display: value });
+    let input = this.state.query += value;
+    this.setState({ query: input});
+  })
 
   equalsFunction = () => {
-    this.setState({ result: eval(this.state.query)});
-    console.log(this.state.result);
-    this.setState({ display: this.state.result});
+    let query = this.state.query;
+    let answer = eval(query);
+    this.setState({ result: answer });
+    this.setState({ display: answer});
   };
 
   clearScreen = () => {
@@ -54,26 +48,15 @@ class App extends React.Component {
       if (value === "=") {
         this.equalsFunction();
       } else {
-        if (value === "+") {
-          this.plusFunction(value);
+        if (value === "+" || value === "-" || value === "*" || value === "/" ) {
+          this.actionFunction(value);
         } else {
-          if (value === "-") {
-            this.minusFunction(value);
-          } else {
-            if (value === "*") {
-              this.multiplyFunction(value);
-            } else {
-              if (value === "/") {
-                this.divideFunction(value);
-              } else {
-                this.numberFunction(value);
-              }
-            }
+          this.numberFunction(value);
           }
         }
       }
     }
-  };
+        
 
   render() {
     return (
