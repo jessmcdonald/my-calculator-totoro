@@ -10,11 +10,13 @@ class App extends React.Component {
       buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ".", "+", "-", "/", "*"],
       display: "",
       query: "",
-      result: 0,
-      firstNumber: "",
-      secondNumber: "",
+      result: "answer"
     };
   }
+
+  numberFunction = (value) => {
+    this.setState({ display: value });
+  };
 
   plusFunction = (value) => {
     this.setState({ display: value})
@@ -33,7 +35,9 @@ class App extends React.Component {
   };
 
   equalsFunction = () => {
-    this.setState({ display: "answer"})
+    this.setState({ result: eval(this.state.query)});
+    console.log(this.state.result);
+    this.setState({ display: this.state.result});
   };
 
   clearScreen = () => {
@@ -48,7 +52,7 @@ class App extends React.Component {
       this.clearScreen();
     } else {
       if (value === "=") {
-        this.equalsFunction(value);
+        this.equalsFunction();
       } else {
         if (value === "+") {
           this.plusFunction(value);
@@ -62,7 +66,7 @@ class App extends React.Component {
               if (value === "/") {
                 this.divideFunction(value);
               } else {
-                this.setState({ display: value });
+                this.numberFunction(value);
               }
             }
           }
