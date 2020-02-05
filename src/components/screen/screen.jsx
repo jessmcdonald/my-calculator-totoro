@@ -5,7 +5,7 @@ class Screen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            result: this.props.query
+            result: this.props.display
         }
     }
     
@@ -18,10 +18,12 @@ class Screen extends React.Component {
                             {this.state.result}
                         </div>
                         
-                        <button className="Equals-Button">
+                        <button className="Equals-Button" key={"="} onClick={() =>
+                        this.props.handleItemClicked("=")
+                      }>
                         =
                         </button>
-                        
+
                     </div>
                 </div>
         )

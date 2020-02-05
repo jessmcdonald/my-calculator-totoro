@@ -8,20 +8,43 @@ class App extends React.Component {
     super(props);
     this.state = {
       buttons: [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, "+", "-", "/", "*", "C"],
-      query: "",
-      result: 123
+      display: "",
+      query: ""
     };
   }
 
+  plusFunction = () => {
+
+  };
+
+  minusFunction = () => {
+
+  };
+
+  multiplyFunction = () => {
+
+  };
+
+  divideFunction = () => {
+
+  };
+
+  equalsFunction = () => {
+
+  };
+
+  clearScreen = () => {
+    this.setState({ display: ""});
+    this.setState({ query: ""})
+  };
+
   handleItemClicked = (value) => {
-    if (value !== "C") {
-      let newState = this.state.query + value;
-      this.setState({ query: newState });
-      console.log(this.state)
+    if (value == "C") {
+      this.clearScreen();
     } else {
-      this.setState({ query: ""})
+      this.setState({ display: value });
+      console.log(this.state)
     }
-    
   };
 
   render() {
@@ -39,7 +62,7 @@ class App extends React.Component {
 
             <div className="Calculator">
               <div className="Display-Screen">
-              <Screen key={this.state.query} query={this.state.query}/>
+              <Screen key={this.state.display} display={this.state.display} handleItemClicked={this.handleItemClicked}/>
               </div>
               
               <div className="Button-Pad">
