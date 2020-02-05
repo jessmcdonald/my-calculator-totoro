@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/my-calculator-totoro/precache-manifest.ecc4bdffa807e0a93891867507a80f1f.js"
+  "/my-calculator-totoro/precache-manifest.53f3c80d1af9e78b89427c45e5be9d08.js"
 );
 
 self.addEventListener('message', (event) => {
