@@ -79,7 +79,7 @@ class App extends React.Component {
           <h3>My Calculator</h3>
           <h1>TOTORO</h1>
           <div className="Totoro">
-            <img src={totoro} alt="Totoro" height="600" className="Tototo-Img"/>
+            <img src={totoro} alt="Totoro" className="Totoro-Img"/>
 
             <div className="Calculator">
               <div className="Display-Screen">

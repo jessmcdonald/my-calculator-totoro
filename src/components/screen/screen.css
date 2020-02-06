@@ -29,3 +29,15 @@
   height: 40px;
 }
 
+
+@media screen and (max-width: 600px) {
+  .Screen-Div {
+    text-align: center; 
+    display: inline-block;
+    background-color: #395f37;
+    width: 200px;
+    height: 40px;
+    font-family: SevenSegment;
+    font-size: 35px;
+  }
+}

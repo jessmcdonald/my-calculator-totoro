@@ -24,15 +24,19 @@
   position: relative
 }
 
+.Totoro-Img {
+  height: 600px
+}
+
 h1 {
   font-weight: 400;
-  font-size: 150px;
+  font-size: 15vh;
   margin: -30px
 }
 
 h3 {
   font-weight: 400;
-  font-size: 60px;
+  font-size: 6vh;
   margin: 0px
 }
 
@@ -87,3 +91,15 @@ button:focus {
   src: local('Spumoni'), url(./fonts/Spumoni.ttf) format('truetype')
 }
 
+@media screen and (max-width: 600px) {
+  .Totoro {
+    width: 370px;
+    text-align: center;
+    display: inline-block;
+    position: relative
+  }
+
+  .Totoro-Img {
+    height: 400px
+  }
+}
