@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74652ab32714e76e49669d5ac19da8fe",
+    "revision": "64bf949993ecd7da7b1e30bdd33c6582",
     "url": "/my-calculator-totoro/index.html"
   },
   {
-    "revision": "442fbf1e0e3c1ddadbad",
-    "url": "/my-calculator-totoro/static/css/main.8a428580.chunk.css"
+    "revision": "cc3eb70cb50fb5a64589",
+    "url": "/my-calculator-totoro/static/css/main.187bde6e.chunk.css"
   },
   {
     "revision": "b498a227d3921be562e3",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/my-calculator-totoro/static/js/2.38d4dbce.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "442fbf1e0e3c1ddadbad",
+    "revision": "cc3eb70cb50fb5a64589",
     "url": "/my-calculator-totoro/static/js/main.de8aa65e.chunk.js"
   },
   {
